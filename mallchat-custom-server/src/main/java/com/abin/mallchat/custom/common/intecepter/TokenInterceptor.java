@@ -41,6 +41,7 @@ public class TokenInterceptor implements HandlerInterceptor {
                 return false;
             }
         }
+        //？线程安全的日志容器
         MDC.put(MDCKey.UID, String.valueOf(validUid));
         return true;
     }
